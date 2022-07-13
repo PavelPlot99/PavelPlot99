@@ -1,16 +1,47 @@
-### Hi there 👋
+```php
+<?php
 
-<!--
-**PavelPlot99/PavelPlot99** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+namespace PavelPlotnikov;
 
-Here are some ideas to get you started:
+class About extends Me
+{
+    /** @return Collection|Project[] */
+    public function getProjects(): Collection
+    {
+        return collect([
+            ['Soluls Like Coop', 'https://github.com/PavelPlot99/SoulsLikeCoopVue'],
+        ])->mapInto(Project::class);
+    }
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+    /** @return Knowledge[] */
+    public function getDailyKnowledge(): array
+    {
+        return [
+            Php::class,
+            Laravel::class,
+            Docker::class,
+            MySQL::class,
+            RestfulApi::class,
+            VueJs::class,
+            Git::class,
+            Vuetify::class,
+            JavaScript::class,
+        ];
+    }
+
+    public function getProfiles(): array
+    {
+        return [
+            'vk'    => 'https://vk.com/6no_love6',
+            'Telegram' => '@PaulPlotty',
+        ];
+    }
+
+    public function getContacts(): array
+    {
+        return [
+            'Email'    => 'pavel.plot99@gamil.com',
+        ];
+    }
+}
+```
